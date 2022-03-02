@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aplicatie_bd.MediciCotroller">
+   <top>
+      <AnchorPane prefHeight="48.0" prefWidth="628.0" style="-fx-background-color: #FFB6C1;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="exitButton" layoutX="317.0" layoutY="4.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="40.0" prefWidth="70.0" text="Close" />
+            <Button fx:id="loadButton" layoutX="7.0" layoutY="4.0" mnemonicParsing="false" onAction="#loadButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Load Table" />
+            <Button fx:id="insertButton" layoutX="87.0" layoutY="4.0" mnemonicParsing="false" onAction="#insertButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Insert" />
+            <Button fx:id="deleteButton" layoutX="167.0" layoutY="4.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Delete" />
+            <Button fx:id="backButton" layoutX="247.0" layoutY="4.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="40.0" prefWidth="70.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <ScrollPane BorderPane.alignment="CENTER">
+         <content>
+            <TableView fx:id="medici" prefHeight="514.0" prefWidth="526.0">
+              <columns>
+                <TableColumn fx:id="IDMedic" prefWidth="73.59997862577438" text="IDMedic" />
+                  <TableColumn fx:id="IDDepartament" prefWidth="143.99998474121094" text="IDDepartament" />
+                <TableColumn fx:id="Nume" prefWidth="163.20001220703125" text="Nume" />
+                  <TableColumn fx:id="Prenume" prefWidth="143.99998474121094" text="Prenume" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="369.0" prefWidth="215.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="nume" layoutX="10.0" layoutY="23.0" promptText="Nume" />
+            <TextField fx:id="prenume" layoutX="9.0" layoutY="73.0" promptText="Prenume" />
+            <Label layoutX="10.0" layoutY="5.0" text="Nume" />
+            <Label layoutX="9.0" layoutY="55.0" text="Prenume" />
+            <TextField fx:id="iddep" layoutX="10.0" layoutY="124.0" promptText="ID" />
+            <Label layoutX="10.0" layoutY="106.0" text="IDDepartament" />
+            <Label layoutX="39.0" layoutY="192.0" text="Detalii Medici">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nrs" layoutX="9.0" layoutY="245.0" />
+            <Label layoutX="7.0" layoutY="227.0" text="Nr minim de studii" />
+            <Label layoutX="7.0" layoutY="305.0" text="Numele Departamentului" />
+            <TextArea fx:id="ND" layoutX="6.0" layoutY="323.0" prefHeight="14.0" prefWidth="155.0" />
+            <Button fx:id="searchButton" layoutX="10.0" layoutY="271.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="26.0" prefWidth="58.0" text="Search" />
+            <Button fx:id="searchButton2" layoutX="7.0" layoutY="361.0" mnemonicParsing="false" onAction="#searchButton2OnAction" text="Search" />
+            <Label layoutX="9.0" layoutY="399.0" text="Numarul de studii la care participa" />
+            <TextArea fx:id="NSP" layoutX="7.0" layoutY="417.0" prefHeight="18.0" prefWidth="154.0" />
+            <Button fx:id="searchButton3" layoutX="7.0" layoutY="459.0" mnemonicParsing="false" onAction="#searchButton3OnAction" text="Search" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

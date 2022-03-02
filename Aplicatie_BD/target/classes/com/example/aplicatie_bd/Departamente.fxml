@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aplicatie_bd.DepartamenteController">
+   <top>
+      <AnchorPane prefHeight="48.0" prefWidth="628.0" style="-fx-background-color: #FFB6C1;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="exitButton" layoutX="397.0" layoutY="4.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="40.0" prefWidth="70.0" text="Close" />
+            <Button fx:id="loadButton" layoutX="7.0" layoutY="4.0" mnemonicParsing="false" onAction="#loadButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Load Table" />
+            <Button fx:id="updateButton" layoutX="87.0" layoutY="4.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Update" />
+            <Button fx:id="insertButton" layoutX="167.0" layoutY="4.0" mnemonicParsing="false" onAction="#insertButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Insert" />
+            <Button fx:id="deleteButton" layoutX="247.0" layoutY="4.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Delete" />
+            <Button fx:id="backButton" layoutX="327.0" layoutY="4.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="40.0" prefWidth="70.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <ScrollPane BorderPane.alignment="CENTER">
+         <content>
+            <TableView fx:id="departamente" prefHeight="514.0" prefWidth="406.0">
+              <columns>
+                <TableColumn fx:id="IDDepartament" prefWidth="113.60000532865524" text="IDDepartament" />
+                <TableColumn fx:id="SefDepartament" prefWidth="124.00003051757812" text="SefDepartament" />
+                  <TableColumn fx:id="NumeDepartament" prefWidth="158.39999999999998" text="NumeDepartament" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="514.0" prefWidth="295.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="nume" layoutX="26.0" layoutY="32.0" promptText="Nume" />
+            <TextField fx:id="sd" layoutX="26.0" layoutY="84.0" promptText="Sef Departament" />
+            <Label layoutX="26.0" layoutY="14.0" text="Nume Departament" />
+            <Label layoutX="26.0" layoutY="66.0" text="Sef Departament" />
+            <Label layoutX="71.0" layoutY="126.0" text="Detalii Departamente">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="161.0" text="Numarul de medici din acest departament" />
+            <TextArea fx:id="nrmed" layoutX="7.0" layoutY="179.0" prefHeight="17.0" prefWidth="209.0" />
+            <Button fx:id="searchButton" layoutX="7.0" layoutY="217.0" mnemonicParsing="false" onAction="#searchButtonOnAction" text="Search" />
+            <Button fx:id="butonMagic" layoutX="7.0" layoutY="368.0" mnemonicParsing="false" onAction="#butonMagicButtonOnAction" prefHeight="26.0" prefWidth="209.0" text="Nu participa la studii" />
+            <Label layoutX="12.0" layoutY="257.0" text="Numele sefului de departament" />
+            <TextArea fx:id="sef" layoutX="10.0" layoutY="275.0" prefHeight="26.0" prefWidth="203.0" />
+            <Button fx:id="search2" layoutX="10.0" layoutY="314.0" mnemonicParsing="false" onAction="#search2ButtonOnAction" prefHeight="26.0" prefWidth="56.0" text="Search" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

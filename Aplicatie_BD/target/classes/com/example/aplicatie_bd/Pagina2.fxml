@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aplicatie_bd.SecondPageController">
+   <top>
+      <AnchorPane prefHeight="34.0" prefWidth="600.0" style="-fx-background-color: #FFB6C1;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backButton" layoutX="441.0" layoutY="2.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="30.0" prefWidth="80.0" text="Back" />
+            <Button fx:id="exitButton" layoutX="521.0" layoutY="2.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="30.0" prefWidth="80.0" text="Close" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Afectiuni" layoutX="2.0" layoutY="9.0" mnemonicParsing="false" onAction="#AfectiuniButtonOnAction" prefHeight="50.0" prefWidth="80.0" text="Afectiuni" />
+            <Button fx:id="Pacienti" layoutX="83.0" layoutY="9.0" mnemonicParsing="false" onAction="#PacientiButtonOnAction" prefHeight="50.0" prefWidth="80.0" text="Pacienti" />
+            <Button fx:id="Medici" layoutX="163.0" layoutY="9.0" mnemonicParsing="false" onAction="#MediciButtonOnAction" prefHeight="50.0" prefWidth="80.0" text="Medici" />
+            <Button fx:id="Clinici" layoutX="243.0" layoutY="9.0" mnemonicParsing="false" onAction="#CliniciButtonOnAction" prefHeight="50.0" prefWidth="80.0" text="Clinici" />
+            <Button fx:id="Departamente" layoutX="323.0" layoutY="9.0" mnemonicParsing="false" onAction="#DepartamenteButtonOnAction" prefHeight="50.0" prefWidth="95.0" text="Departamente" />
+            <Button fx:id="Studii" layoutX="418.0" layoutY="9.0" mnemonicParsing="false" onAction="#StudiiButtonOnAction" prefHeight="50.0" prefWidth="80.0" text="Studii" />
+            <Button fx:id="DS" layoutX="498.0" layoutY="9.0" mnemonicParsing="false" onAction="#DSButtonOnAction" prefHeight="50.0" prefWidth="101.0" text="Detali_studii" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="325.0" prefWidth="242.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="Picture" fitHeight="310.0" fitWidth="312.0" layoutX="-1.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../IMG/online_doctors_notes_hero_image@2x.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="311.0" layoutY="14.0" prefHeight="310.0" prefWidth="282.0" text="Alegeti un tabel" textAlignment="CENTER">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aplicatie_bd.PacientiController">
+   <top>
+      <AnchorPane prefHeight="48.0" prefWidth="628.0" style="-fx-background-color: #FFB6C1;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="exitButton" layoutX="397.0" layoutY="4.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="40.0" prefWidth="70.0" text="Close" />
+            <Button fx:id="loadButton" layoutX="7.0" layoutY="4.0" mnemonicParsing="false" onAction="#loadButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Load Table" />
+            <Button fx:id="updateButton" layoutX="87.0" layoutY="4.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Update" />
+            <Button fx:id="insertButton" layoutX="167.0" layoutY="4.0" mnemonicParsing="false" onAction="#insertButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Insert" />
+            <Button fx:id="deleteButton" layoutX="247.0" layoutY="4.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="40.0" prefWidth="80.0" text="Delete" />
+            <Button fx:id="backButton" layoutX="327.0" layoutY="4.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="40.0" prefWidth="70.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <ScrollPane BorderPane.alignment="CENTER">
+         <content>
+            <TableView fx:id="pacienti" prefHeight="585.0" prefWidth="1102.0">
+              <columns>
+                <TableColumn fx:id="IDPacient" prefWidth="73.59997862577438" text="IDPacient" />
+                <TableColumn fx:id="Nume" prefWidth="163.20001220703125" text="Nume" />
+                  <TableColumn fx:id="Prenume" prefWidth="143.99998474121094" text="Prenume" />
+                  <TableColumn fx:id="CNP" prefWidth="143.99998474121094" text="CNP" />
+                  <TableColumn fx:id="DataNasterii" prefWidth="143.99998474121094" text="DataNasterii" />
+                  <TableColumn fx:id="Sex" prefWidth="143.99998474121094" text="Sex" />
+                  <TableColumn fx:id="Tara" prefWidth="143.99998474121094" text="Tara" />
+                  <TableColumn fx:id="Oras" prefWidth="143.99998474121094" text="Oras" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="577.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="nume" layoutX="10.0" layoutY="23.0" promptText="Nume" />
+            <TextField fx:id="prenume" layoutX="10.0" layoutY="67.0" promptText="Prenume" />
+            <Label layoutX="10.0" layoutY="5.0" text="Nume" />
+            <Label layoutX="9.0" layoutY="49.0" text="Prenume" />
+            <TextField fx:id="cnp" layoutX="10.0" layoutY="124.0" promptText="CNP" />
+            <Label layoutX="10.0" layoutY="106.0" text="CNP" />
+            <Label layoutX="8.0" layoutY="159.0" text="Data Nasterii" />
+            <Label layoutX="12.0" layoutY="207.0" text="Sex" />
+            <Label layoutX="9.0" layoutY="257.0" text="Tara" />
+            <Label layoutX="16.0" layoutY="309.0" text="Oras" />
+            <TextField fx:id="dn" layoutX="10.0" layoutY="177.0" promptText="Data Nasterii" />
+            <TextField fx:id="sex" layoutX="10.0" layoutY="225.0" promptText="Sex" />
+            <TextField fx:id="tara" layoutX="10.0" layoutY="275.0" promptText="Tara" />
+            <TextField fx:id="oras" layoutX="10.0" layoutY="327.0" promptText="Oras" />
+            <Label layoutX="73.0" layoutY="367.0" text="Detalii Pacienti">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="searchButton" layoutX="15.0" layoutY="447.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="26.0" prefWidth="82.0" text="Search" />
+            <TextField fx:id="t_an" layoutX="16.0" layoutY="415.0" promptText="An" />
+            <Label layoutX="16.0" layoutY="397.0" text="Introduceti anul" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
